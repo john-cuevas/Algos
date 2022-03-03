@@ -31,9 +31,16 @@ function sumToOneDigit(num) {
     // return sumToOneDigit(num % 10 + sumToOneDigit(Math.floor(num / 10)))
     
     if (num < 10) {
-        return num
+        return num;
     }
-    num = num.toString();
+
+    var result = 0;
+    var stringnum = num.toString();
+    for (var i = 0; i < stringnum.length; i++){
+        result += parseInt(stringnum[i])
+        return result
+    }
+
 
 
 }
