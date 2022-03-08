@@ -34,3 +34,8 @@ console.log(bubbleSort(numsRandomOrder));
 console.log(bubbleSort(numsReversed));
 
 // possible for second loop to loop through only the sorted?
+
+
+// built in swap function 
+
+[a,b] = [b,a]
