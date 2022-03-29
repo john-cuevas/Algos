@@ -131,5 +131,26 @@ const expected4 = false;
   Bonus: solve in O(n) time
 */
 function backspaceStringCompare(S, T) {
+    const arr1 = []
+    const arr2 = []
+    for (letter of S) {
+        if (letter === "#") {
+            arr1.pop()
+            console.log(arr1)
+        } else {
+            arr1.push(letter)
+            console.log(arr1)
+        }
+    }
+    for (letter of T) {
+        if (letter === "#") {
+            arr2.pop()
+            console.log(arr2)
+        } else {
+            arr2.push(letter)
+            console.log(arr2)
+        }
+    }
 
+    return arr1.join("") === arr2.join("") ? true : false
 }
