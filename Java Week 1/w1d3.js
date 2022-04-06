@@ -51,7 +51,7 @@ class SLL {
         }
         else{
             node.next = this.head;
-        this.head = node;
+            this.head = node;
         }
 
     }
@@ -100,6 +100,8 @@ var sll2 = new SLL();
 sll2.insertAtBack(5);
 sll2.insertAtBack(6);
 sll2.insertAtBack(7);
+sll2.insertAtFront(4);
+sll2.insertAtFront(3);
 
 // HEAD
 // (5) -> (6) -> (7) -> NULL
@@ -107,5 +109,5 @@ sll2.insertAtBack(7);
 sll2.printList();
 sll2.removeHead();
 sll2.printList()
-sll2.removeHead();
-sll2.printList();
+// sll2.removeHead();
+// sll2.printList();
