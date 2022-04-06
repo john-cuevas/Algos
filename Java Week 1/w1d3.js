@@ -46,13 +46,15 @@ class SLL {
         // reassign the head
         // how do we handle an empty list
         var node = new ListNode(data);
-        if (!this.head) {
-            this.head = node;
-        }
-        else{
-            node.next = this.head;
-            this.head = node;
-        }
+        // if (!this.head) {
+        //     this.head = node;
+        // }
+        // else{
+        //     node.next = this.head;
+        //     this.head = node;
+        // }
+        node.next = this.head;
+        this.head = node;
 
     }
 
@@ -69,6 +71,7 @@ class SLL {
         else {
             console.log("Empty list");
         }
+        
     }
 
 
