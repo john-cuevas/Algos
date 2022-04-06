@@ -41,21 +41,21 @@ class SLL {
    * @returns {SinglyLinkedList} This list.
    */
     insertAtFront(data) {
+        // instantiate the ListNode based on data
+        // pointer of the newNode to the original head
+        // reassign the head
+        // how do we handle an empty list
         var node = new ListNode(data);
         if (!this.head) {
             this.head = node;
-            return;
+        }
+        else{
+            node.next = this.head;
+        this.head = node;
         }
 
-        node.next = this.head;
-        this.head = node;
-        return;
     }
 
-    // instantiate the ListNode based on data
-    // pointer of the newNode to the original head
-    // reassign the head
-    // how do we handle an empty list
     /**
    * Removes the first node of this list.
    * - Time: O(1) constant.
