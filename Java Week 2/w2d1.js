@@ -71,9 +71,14 @@ class BinarySearchTree {
      * @returns {number} The smallest integer from this tree.
      */
     minRecursive(current = this.root) {
-        if (this.isEmpty()) {
-            return "Empty Tree"
+        if (!current) {
+            console.log("This tree is empty!")
+            return false;
         }
+        if (!current.left) {
+            return current.data;
+        }
+        return this.minRecursive(current.left);
 
 
     }
