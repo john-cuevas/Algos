@@ -28,6 +28,6 @@ function arePermutation (str1, str2){
 // Test code
 
 let str1 = "test";
-let str2 = "ttew";
+let str2 = "stet";
 
 console.log(arePermutation(str1, str2))
