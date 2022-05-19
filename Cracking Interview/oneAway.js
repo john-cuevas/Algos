@@ -29,6 +29,7 @@ function oneEditAway(first, second) {
     }
     return true;
 }
+// Check
 
 let first = "pale";
 let second = "bake";
