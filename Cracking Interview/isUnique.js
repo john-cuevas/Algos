@@ -26,6 +26,7 @@ function isUniqueChars2 (str){
     return true;
 }
 
-str = 'cat';
+str = 'mom';
+
 console.log(checkForUnique(str));
 // console.log(isUniqueChars2(str));
