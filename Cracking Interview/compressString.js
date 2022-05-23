@@ -18,12 +18,10 @@ function compressString(str){
     return str;
 }
 
-let str1 = 'aaabbbcccdddd';
-let str2 = 'bbbcc';
+let str1 = 'aaabbbcccdddda';
+let str2 = 'bbbccbbb';
 let str3 = 'aab';
 
 console.log(compressString(str1));
 console.log(compressString(str2));
 console.log(compressString(str3));
-
-// only works when string is in order
