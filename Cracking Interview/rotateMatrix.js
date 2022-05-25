@@ -9,6 +9,8 @@
 
 // m = # rows
 // n = # columns
+
+// matrix notation not correct
 function rotate(m,n){
     // base case
     if((m = 0)|| (n = 0)|| (m != n)){
