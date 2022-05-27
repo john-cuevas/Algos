@@ -1,6 +1,6 @@
 function alphabetPosition(text) {
     let test = "abcdefghijklmnopqrstuvwxyz";
-    text = text.toLowerCase();
+    text = text.toLowerCase(); // makes all characters lowercase
     let textArr = [];
     for (let i = 0; i < text.length; i++) {
         for (let j = 0; j < test.length; j++) {
