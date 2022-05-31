@@ -36,6 +36,6 @@ let arr2 = [1, 0, 'help', 1, 2];
 console.log(moveZeros(arr1));
 console.log(moveZeros2(arr1));
 console.log("------------------")
-// console.log(moveZeros(arr2));
-// console.log(moveZeros2(arr2));
+console.log(moveZeros(arr2));
+console.log(moveZeros2(arr2));
 
