@@ -8,7 +8,8 @@ function sumTwoSmallestNumbers(numbers) {
         }
     }
     // sort array
-    result.sort((a,b) => a-b);
+    result.sort((a,b) => a - b);
+    console.log(result);
 
     return result[0] + result[1];
 }
