@@ -19,7 +19,6 @@ function nameShuffler(str) {
     // join combines the elements of the array into a string
 
     return str.split(" ").reverse().join(" ");
-    // return str.split(" ").reverse().join(" ");
 }
 
 let str1 = "John Cuevas";
