@@ -14,6 +14,17 @@ function alternate(n, firstValue, secondValue) {
         else{
             result.push(secondValue);
         }
+
+        // my first solution
+        // if (result[i] == null) {
+        //     result.push(firstValue);
+        // }
+        // if(result[i] == firstValue){
+        //     result.push(secondValue);
+        // }
+        // else{
+        //     result.push(firstValue);
+        // }
     }
     return result;
 }
