@@ -7,15 +7,6 @@ function alternate(n, firstValue, secondValue) {
     }
 
     for (let i = 0; i < n; i++) {
-        // if (result[i] == null) {
-        //     result.push(firstValue);
-        // }
-        // if(result[i] == firstValue){
-        //     result.push(secondValue);
-        // }
-        // else{
-        //     result.push(firstValue);
-        // }
 
         if( i %2 == 0){
             result.push(firstValue);
