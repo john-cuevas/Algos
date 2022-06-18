@@ -12,3 +12,8 @@ function evensAndOdds(num) {
         return num.toString(16);
     }
 }
+// faster solution
+
+function evensAndOdds2(num) {
+    return num.toString(n%2 ? 16 : 2);
+}
