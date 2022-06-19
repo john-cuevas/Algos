@@ -1,4 +1,4 @@
-function spongebob (sentence){
+function spongebob(sentence) {
     let result ="";
 
     for(let i = 0; i < sentence.length; i++){
@@ -10,6 +10,12 @@ function spongebob (sentence){
         }
     }
     return result;
+
+    // another method
+    return sentence.split('').map((letter, i) =>
+        i % 2 ? letter.toLowerCase() : letter.toUpperCase()
+    ).join('')
+
 }
 
 let sentence1 = "HELLO world";
