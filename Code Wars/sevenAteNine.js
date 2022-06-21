@@ -1,4 +1,5 @@
 function sevenAteNine(str){
+    // g is a global variable
     return str =  str.replace(/797/g, "77")
 }
 
