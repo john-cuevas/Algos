@@ -1,19 +1,8 @@
-function isSortedAndHow(array) {
-    let ascending = array.sort((a,b) => a-b);
-    let descending = ascending.reverse();
-    console.log(ascending);
-    console.log(array)
-    console.log(descending);
-    if(ascending === array){
-        return "yes, ascending";
-    }
-    else if(descending === array){
-        return "yes, descending";
-    }
-    else{
-        return "no";
-    }
+const isSortedAndHow = a => {
+    const s = a.join``;
+    return s === a.sort((x, y) => x - y).join`` ? 'yes, ascending' :
+        s === a.sort((x, y) => y - x).join`` ? 'yes, descending' : 'no';
 }
 
-let array1 = [2, 1, 3, 4, 5];
+let array1 = [1, 4, 3, 2, 5];
 console.log(isSortedAndHow(array1));
