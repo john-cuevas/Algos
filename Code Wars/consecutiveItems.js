@@ -13,6 +13,17 @@ const consecutive = (arr, a, b) => {
     else{
         return false;
     }
+
+    // another solution
+    
+    // let result =  Math.abs(arr.indexOf(a) - arr.indexOf(b) == 1);
+
+    // if(result == 1){
+    //     return true;
+    // }
+    // return false;
+
+
 }
 
 let array1 = [ 1, 3, 5, 7];
