@@ -1,7 +1,7 @@
 // do baby shark in less than 300 characters
 
 // my solution
-const babyShark = (char) => {
+const babyShark = () => {
     let loop = 0;
     const char = ['Baby shark', 'Mommy shark', 'Daddy shark', 'Grandma shark', 'Grandpa shark', "Let's go hunt"];
     for(let i =0; i < char.length; i++){
@@ -12,6 +12,14 @@ const babyShark = (char) => {
         loop = 0;
         console.log(char[i] +"!")
     }
-    console.log("Run away,...")
+    return("Run away,...")
 }
-console.log(babyShark());
+
+// more condense
+// join method creates and returns new string by concatenating all of the elements in an array, separated by commas or specified separator string
+
+const babyShark1 = () =>{
+    names = ['Baby shark', 'Mommy shark', 'Daddy shark', 'Grandma shark', 'Grandpa shark', "Let's go hunt"];
+    return names.map((name) => `${name}, ${" doo".repeat(6)}\n`.repeat(3) + `${name}!\n`).join("") + "Run away,...";
+}
+console.log(babyShark1());
