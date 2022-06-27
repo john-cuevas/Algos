@@ -1,3 +1,8 @@
+// replace * from infected word with element from discovered
+// infected = "A**Z*N*" discovered = "MAIG"
+// AMAZING
+
+// my solution
 const uncensor =(infected, discovered) =>{
     let result =""
     let count = 0 ;
@@ -16,6 +21,14 @@ const uncensor =(infected, discovered) =>{
     }
     return result;
 }
+
+// better solution
+
+const uncensor2 = (infected, discovered) =>{
+    const arr = [...discovered];
+    return [...infected].map(el => el === '*' ? arr.shift() : el).join('')
+}
+
 let infected ="A**Z*N*";
 let discovered ="MAIG"
-console.log(uncensor(infected))
+console.log(uncensor2(infected))
