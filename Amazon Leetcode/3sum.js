@@ -8,9 +8,9 @@ const threeSum = (nums) =>{
 
     for(let i = 0; i < nums.length -2; i++){
         if(nums[i] != nums[i-1]){ // make sure solution set does not contain duplicate triplets.
-            let left = i+1;
-            let right = nums.length -1;
-            while(left < right){
+            let left = i+1; // start at left
+            let right = nums.length -1; // start at end
+            while(left < right){ 
                 const currentSum = nums[i] + nums[left] + nums[right];
                 if(currentSum === 0){
                     result.push([nums[i], nums[left], nums[right]]);
