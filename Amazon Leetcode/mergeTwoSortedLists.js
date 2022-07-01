@@ -45,3 +45,38 @@ const mergeTwoLists2 = (list1, list2) => {
 
 console.log(mergeTwoLists2(list1, list2))
 console.log(mergeTwoLists2(list3, list4))
+
+const mergeTwoLists3 = (l1, l2) =>{
+    // Initialize new linked list with dummy list node
+    let newList = new ListNode(0);
+
+    // maintain a reference to head of new linked list
+    let head = newList;
+
+    while(l1 != null && l2 != null){
+        if(l1.val < l2.val){
+            // adds l1 value to new list
+            newList.next = l1;
+            // move l1 to its next element
+            l1 = l1.next;
+        }else{
+            // adds l2 value to new list
+            newList.next = l2;
+            l2 = l2.next;
+        }
+        // move into the next level of the linkedlist for the next iteration
+        newList = newList.next;
+    }
+
+    // if l1 out of elements
+    if(l1 === null){
+        newList.next = l2;
+    }
+    // if l2 out of elements
+    else{
+        newList.next = l1;
+    }
+    return head.next;
+}
+console.log(mergeTwoLists3(list1, list2))
+console.log(mergeTwoLists3(list3, list4))
