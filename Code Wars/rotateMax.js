@@ -11,8 +11,6 @@ const maxRot =(n) =>{
     let count = 0;
     while(count < array.length -1){
         let number = array.splice(count, 1);
-        console.log("Logging number")
-        console.log(number);
         // converts number variable to number, then pushes to end of array
         array.push(Number(number));
         result.push(Number(array.join('')));
@@ -22,7 +20,7 @@ const maxRot =(n) =>{
     result.unshift(n);
     // sort array in descending order
     result.sort((a,b) => b-a)
-    return result;
+    return result[0];
 
 }
 
