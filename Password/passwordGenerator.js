@@ -19,27 +19,27 @@ const passwordGenerator = (length, low, up, num, pun) => {
     }
 
     // Checking if specific characters exist in generated password
-
     let numCount = 0;
-    for (let i = 0; i < numbers.length; i++) {
-        if (password.includes(numbers[i])) {
+    for(let i = 0; i < numbers.length; i++){
+        if(password.includes(numbers[i])){
             numCount++
         }
     }
-    // console.log("num" + numCount)
+
+    console.log(password)
+    console.log("num" + numCount)
 
     let punCount = 0;
-    for (let i = 0; i < punctuation.length; i++) {
-        if (password.includes(punctuation[i])) {
+    for(let i = 0; i < punctuation.length; i++){
+        if(password.includes(punctuation[i])){
             punCount++
         }
     }
-    // console.log("pun" + punCount)
+    console.log("pun" + punCount)
 
-    if (numCount == 0 || punCount == 0) {
+    if(numCount == 0 || punCount == 0){
         passwordGenerator(length, low, up, num, pun)
     }
-
 
     return password;
 
