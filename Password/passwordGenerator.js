@@ -7,6 +7,7 @@ const passwordGenerator = (length, low, up, num, pun) => {
     let char = [lowercase, uppercase, numbers, punctuation];
     let possible = "";
     let bool = [low, up, num, pun];
+    let count = 0;
 
     for (let i = 0; i < bool.length; i++) {
         if (bool[i] == true) {
@@ -20,8 +21,8 @@ const passwordGenerator = (length, low, up, num, pun) => {
 
     // Checking if specific characters exist in generated password
     let numCount = 0;
-    for(let i = 0; i < numbers.length; i++){
-        if(password.includes(numbers[i])){
+    for (let i = 0; i < numbers.length; i++) {
+        if (password.includes(numbers[i])) {
             numCount++
         }
     }
@@ -30,18 +31,29 @@ const passwordGenerator = (length, low, up, num, pun) => {
     console.log("num" + numCount)
 
     let punCount = 0;
-    for(let i = 0; i < punctuation.length; i++){
-        if(password.includes(punctuation[i])){
+    for (let i = 0; i < punctuation.length; i++) {
+        if (password.includes(punctuation[i])) {
             punCount++
         }
     }
     console.log("pun" + punCount)
-
-    if(numCount == 0 || punCount == 0){
+    if (numCount > 0 && punCount > 0) {
+        return password;
+    }
+    else{
         passwordGenerator(length, low, up, num, pun)
+        let password1 = password;
+        return password1;
     }
 
-    return password;
+
+
+
+    // // call function again
+
+    // if(numCount == 0 || punCount == 0){
+    //     passwordGenerator(length, low, up, num, pun)
+    // }
 
 }
 
