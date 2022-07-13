@@ -1,13 +1,5 @@
 const nbYear = (p0, percent, aug, p) => {
     let years = 0;
-    // while (solution < p){
-    //     let initial = p0;
-    //     let growth = initial + (initial * percent) + aug;
-    //     solution += Math.round(growth);
-    //     years ++;
-    //     initial = Math.round(growth);
-    //     console.log(initial)
-    // }
 
     for (let i = 0; p0 < p; i++) {
         p0 = Math.floor(p0 + p0 * percent / 100 + aug);
