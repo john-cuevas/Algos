@@ -41,19 +41,9 @@ const passwordGenerator = (length, low, up, num, pun) => {
         return password;
     }
     else{
-        passwordGenerator(length, low, up, num, pun)
-        let password1 = password;
-        return password1;
+        // call function again
+        return passwordGenerator(length, low, up, num, pun)
     }
-
-
-
-
-    // // call function again
-
-    // if(numCount == 0 || punCount == 0){
-    //     passwordGenerator(length, low, up, num, pun)
-    // }
 
 }
 
