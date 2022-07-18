@@ -14,9 +14,17 @@ const passwordGenerator = (length, low, up, num, pun) => {
         }
     }
 
+    // In case user doesn't select any type of characters
+
+    if(possible.length == 0){
+        return "At least one type of character must be selected";
+    }
+
     while (password.length < length) {
         password += possible.charAt(Math.floor(Math.random() * possible.length));
     }
+
+    // if both numbers and punctuation types are selected
 
     if (bool[2] == true && bool[3] == true) {
         // Checking if specific characters exist in generated password
@@ -45,6 +53,8 @@ const passwordGenerator = (length, low, up, num, pun) => {
             return passwordGenerator(length, low, up, num, pun)
         }
     }
+
+    // punctuation is selected and numbers are not
     else if(bool[2] == false && bool[3] == true){
         let punCount = 0;
         for (let i = 0; i < punctuation.length; i++) {
@@ -61,6 +71,7 @@ const passwordGenerator = (length, low, up, num, pun) => {
             return passwordGenerator(length, low, up, num, pun)
         }
     }
+    // numbers are selected and punctuation is not
     else if(bool[2] == true && bool[3] == false){
         let numCount = 0;
         for (let i = 0; i < numbers.length; i++) {
@@ -87,5 +98,5 @@ let length = 8;
 let low = true;
 let up = true;
 let num = true;
-let pun = false;
+let pun = true;
 console.log(passwordGenerator(length, low, up, num, pun))
