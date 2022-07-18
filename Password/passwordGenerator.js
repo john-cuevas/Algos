@@ -18,34 +18,67 @@ const passwordGenerator = (length, low, up, num, pun) => {
         password += possible.charAt(Math.floor(Math.random() * possible.length));
     }
 
-    if(bool[num] == false){
-        return password;
-    }
+    if (bool[2] == true && bool[3] == true) {
+        // Checking if specific characters exist in generated password
+        let numCount = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            if (password.includes(numbers[i])) {
+                numCount++
+            }
+        }
 
-    // Checking if specific characters exist in generated password
-    let numCount = 0;
-    for (let i = 0; i < numbers.length; i++) {
-        if (password.includes(numbers[i])) {
-            numCount++
+        console.log(password)
+        console.log("num" + numCount)
+
+        let punCount = 0;
+        for (let i = 0; i < punctuation.length; i++) {
+            if (password.includes(punctuation[i])) {
+                punCount++
+            }
+        }
+        console.log("pun" + punCount)
+        if (numCount > 0 && punCount > 0) {
+            return password;
+        }
+        else {
+            // call function again
+            return passwordGenerator(length, low, up, num, pun)
         }
     }
-
-    console.log(password)
-    console.log("num" + numCount)
-
-    let punCount = 0;
-    for (let i = 0; i < punctuation.length; i++) {
-        if (password.includes(punctuation[i])) {
-            punCount++
+    else if(bool[2] == false && bool[3] == true){
+        let punCount = 0;
+        for (let i = 0; i < punctuation.length; i++) {
+            if (password.includes(punctuation[i])) {
+                punCount++
+            }
+        }
+        console.log("pun" + punCount)
+        if (punCount > 0) {
+            return password;
+        }
+        else {
+            // call function again
+            return passwordGenerator(length, low, up, num, pun)
         }
     }
-    console.log("pun" + punCount)
-    if (numCount > 0 && punCount > 0) {
-        return password;
+    else if(bool[2] == true && bool[3] == false){
+        let numCount = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            if (password.includes(numbers[i])) {
+                numCount++
+            }
+        }
+        console.log("num" + numCount)
+        if (numCount > 0) {
+            return password;
+        }
+        else {
+            // call function again
+            return passwordGenerator(length, low, up, num, pun)
+        }
     }
-    else{
-        // call function again
-        return passwordGenerator(length, low, up, num, pun)
+    else if(bool[2] == false && bool[3] == false){
+        return password
     }
 
 }
@@ -54,5 +87,5 @@ let length = 8;
 let low = true;
 let up = true;
 let num = true;
-let pun = true;
+let pun = false;
 console.log(passwordGenerator(length, low, up, num, pun))
