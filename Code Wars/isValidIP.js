@@ -1,7 +1,7 @@
 const isValidIP = str => {
     const values = str.split(".")
-    console.log(values)
-    if (values.length < 4 || values.length < 0) {
+    console.log(values.length)
+    if (values.length != 4) {
         return false;
     }
     for (let i = 0; i < values.length; i++) {
@@ -21,5 +21,5 @@ const isValidIP = str => {
     return true;
 }
 
-let str = "1.2.3.450";
+let str = "1.2.450";
 isValidIP(str)
