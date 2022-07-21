@@ -25,7 +25,7 @@ class Pong {
         this.turn = this.turn % 2 + 1;
         if(this.gameOver){
             console.log("Game Over!");
-            return 'Game Over!'
+            return "'Game Over!'"
         }
         if(diff <= 3.5){
             console.log("Player " + this.turn + " has hit the ball!");
