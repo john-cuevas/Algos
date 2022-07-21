@@ -1,23 +1,16 @@
 // create a new list that contains each number of list at most N times, without reordering.
 
-const deleteNth = (arr,n) => {
-    let count = 0;
-    let pointer = 0;
-    for (let i = 0; i < arr.length; i++){
-        if(pointer == 0){
-            pointer += arr[i];
-        }
-        if(pointer == arr[i]){
-            console.log(pointer)
-            count ++;
-            if(count > n){
-                arr.splice(i, 1)
-            }
-        }
-    }
-    return arr
+function deleteNth(arr, x) {
+    var cache = {};
+    return arr.filter(function (n) {
+        cache[n] = (cache[n] || 0) + 1;
+        return cache[n] <= x;
+    });
 }
 
-let arr = [20,37,20,21];
+let arr = [20, 37, 20, 21];
 let n = 1;
+let arr1 = [1, 2, 3, 1, 2, 1, 2, 3];
+let n1 = 2;
 console.log(deleteNth(arr, n));
+console.log(deleteNth(arr1, n1));
