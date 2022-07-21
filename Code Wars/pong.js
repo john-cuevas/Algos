@@ -24,19 +24,23 @@ class Pong {
         
         this.turn = this.turn % 2 + 1;
         if(this.gameOver){
-            return "Game Over!";
+            console.log("Game Over!");
+            return 'Game Over!'
         }
         if(diff <= 3.5){
-            return "Player " + this.turn + " has hit the ball!";
+            console.log("Player " + this.turn + " has hit the ball!");
+            return `Player ${this.turn} has hit the ball!`;
         }
         else{
             this.scores[this.turn] ++;
 
             if(this.scores[this.turn] == this.maxScore){
                 this.gameOver = true;
-                return "Player " + (this.turn % 2 + 1) + " has won the game!"
+                console.log("Player " + (this.turn % 2 + 1) + " has won the game!")
+                return `Player ${this.turn % 2 + 1} has won the game!`;
             }
-            return "Player " + this.turn + " has missed the ball!"
+            console.log("Player " + this.turn + " has missed the ball!")
+            return `Player ${this.turn} has missed the ball!`;
         }    
     }
 }
