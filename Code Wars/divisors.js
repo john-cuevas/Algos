@@ -4,12 +4,23 @@
 
 const getDivisorsCnt = n =>{
     let result = [];
-    for(let i =0; i <=n; i++){
+    for(let i = 1; i <=n; i++){
         if(n/i %1 == 0){
             result.push(i);
         }
     }
     return result.length;
+}
+
+// faster solution
+const getDivisorsCnt1 = n =>{
+    let count = 0;
+    for(let i = 1; i <=n; i++){
+        if(n/i %1 == 0){
+            count++
+        }
+    }
+    return count;
 }
 
 let n = 30;
