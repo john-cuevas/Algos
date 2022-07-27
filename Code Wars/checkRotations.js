@@ -23,7 +23,6 @@ const checkRotate = arr =>{
             break;
         }
     }
-    console.log("count")
     return count;
 
     
