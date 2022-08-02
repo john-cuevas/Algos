@@ -11,13 +11,16 @@ const isPrime = num =>{
         }
     }
 
+    console.log(result);
+
     if(result.length == 2){
-        return false;
-    }
-    else{
         return true;
     }
+    else{
+        return false;
+    }
+    
 }
 
 let num = 11;
-console.log(numberPrime(num))
+console.log(isPrime(num))
