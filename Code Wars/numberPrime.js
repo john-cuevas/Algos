@@ -22,5 +22,5 @@ const isPrime = num =>{
     
 }
 
-let num = 11;
+let num = 5099;
 console.log(isPrime(num))
