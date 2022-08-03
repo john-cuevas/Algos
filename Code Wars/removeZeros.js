@@ -19,6 +19,11 @@ const removeZeros = array => {
     return array;
 }
 
+
+const removeZeros1 = array =>{
+
+}
+
 let array = [7, 2, 3, 0, 4, 6, 0, 0, 13, 0, 78, 0, 0, 19, 14]
 
 console.log(removeZeros(array))
